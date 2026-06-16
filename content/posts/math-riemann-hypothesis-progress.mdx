@@ -1,0 +1,39 @@
+---
+title: "Mathematician Proves Riemann Hypothesis Holds for First 10 Trillion Zeros"
+date: "2026-06-08"
+summary: "A computational number theory group has verified that all non-trivial zeros of the Riemann zeta function lie on the critical line up to an imaginary part of 10 trillion, extending the verified range by an order of magnitude."
+category: "Mathematics"
+tags: ["Riemann-hypothesis", "number-theory", "prime-numbers", "computation"]
+author: "Prof. David Lehmann"
+---
+
+## The Holy Grail of Mathematics
+
+The Riemann Hypothesis — proposed by Bernhard Riemann in 1859 — asserts that all non-trivial zeros of the complex-valued Riemann zeta function ζ(s) lie on the "critical line" where the real part of s equals ½.
+
+It remains one of the seven Millennium Prize Problems, with a $1 million bounty. It has not been proved. But a new computational result from a collaboration between the University of Bonn and the Flatiron Institute has pushed the verified frontier dramatically further.
+
+## What Was Computed
+
+The team verified that the **first 10,025,849,543,012 non-trivial zeros** of the Riemann zeta function all have real part exactly equal to ½. The previous record, set in 2021, was ~10¹² zeros.
+
+This 10-fold extension required:
+- 3.2 million CPU-hours on the Frontier supercomputer
+- A novel **fast multiprecision arithmetic library** that reduced per-zero computation by 40%
+- New **numerical stability techniques** preventing floating-point errors from accumulating over the longer computation
+
+## What This Proves (and Doesn't)
+
+Verifying finite zeros does not prove the hypothesis — there are infinitely many zeros. But the extended verification:
+
+1. Strengthens confidence in the hypothesis
+2. Has direct applications in **cryptography** and prime number distribution
+3. Validates analytic methods used to make the computation tractable
+
+The team's algorithm also produces, as a byproduct, the largest known **prime number gap table** — a record of stretches in the integers with no primes.
+
+## Why It Matters for You
+
+The Riemann Hypothesis underlies the security of RSA encryption. If it were false, prime numbers could be distributed differently than assumed, potentially weakening cryptographic systems. Each additional verified zero tightens the bounds on any potential counterexample.
+
+The computation and all verification logs have been published openly on arXiv and Zenodo.

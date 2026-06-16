@@ -1,0 +1,36 @@
+---
+title: "New Study Reveals How Large Language Models Develop Chain-of-Thought Reasoning"
+date: "2026-06-16"
+summary: "Researchers at MIT and Stanford have uncovered the internal mechanisms by which transformer-based models spontaneously develop multi-step reasoning, challenging previous assumptions about emergent capabilities."
+category: "AI & Machine Learning"
+tags: ["LLMs", "transformers", "reasoning", "interpretability"]
+author: "Dr. Sarah Chen"
+---
+
+## Background
+
+For years, researchers have marveled at the seemingly magical ability of large language models (LLMs) to solve complex multi-step problems through a technique known as **chain-of-thought (CoT) reasoning**. When prompted to "think step by step," these models dramatically outperform their baseline accuracy — but the *why* has remained elusive.
+
+## What the Study Found
+
+A new paper published in *Nature Machine Intelligence* used mechanistic interpretability tools to trace exactly which attention heads and MLP layers activate during CoT prompting. The team found that:
+
+1. **Dedicated reasoning circuits** emerge during pre-training, not fine-tuning.
+2. Models maintain a "scratchpad" representation in middle layers that acts as working memory.
+3. Errors in chain-of-thought primarily originate from a specific set of attention heads that the researchers call *continuity heads*.
+
+## Why It Matters
+
+This discovery has major implications for AI safety and alignment. If reasoning is localized to specific circuits, researchers can:
+
+- Audit models for deceptive reasoning patterns
+- Selectively reinforce or suppress specific reasoning pathways
+- Build more transparent AI systems
+
+## What Comes Next
+
+The team is now collaborating with Anthropic and DeepMind to validate these findings across different model architectures. Early results suggest the circuits are architecture-agnostic, appearing in both GPT-style and Mixture-of-Experts models.
+
+> "This is the first time we've been able to draw a clear map from a high-level cognitive behavior to specific neural circuits in a large model." — Lead author Dr. James Park
+
+The paper is available on arXiv and the activation datasets have been released publicly.
