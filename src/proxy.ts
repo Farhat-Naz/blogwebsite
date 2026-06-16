@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow login page and auth API through
   if (
     pathname === "/admin/login" ||
     pathname.startsWith("/api/admin/auth")
@@ -12,7 +11,6 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Protect all /admin and /api/admin routes
   if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
     const token = request.cookies.get("admin_token")?.value;
     const password = process.env.ADMIN_PASSWORD ?? "admin123";

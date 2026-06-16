@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getPostBySlug } from "@/lib/posts";
 import PostForm from "@/components/admin/PostForm";
 import { notFound } from "next/navigation";
